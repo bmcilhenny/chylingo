@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chylingo - teach DJ Rumpus Mandarin for his big state visit to the P.R.C. </title>
+<link href = "../css/opening_sequence.css" id = "styleSheetz" rel = "stylesheet" type = "text/css">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" type = "text/css">
+ <!--incredible library for plug and play animations, many thanks to @https://github.com/daneden for the incredible library -->
+
+</head>
+<body>
+
+<!-- opening sequence -->
+
+<div id = "openingSequence">
+	<div class = "testing">
+		<div class = "beginningText">
+		  <h3>Welcome to</h3>
+		  <h1>Chylingo</h1> 
+		  <div id = "explainerBoxWrapper">
+			  <div id = "explainerBox">
+			  <p>It's t-minus <span id = "countDownTillTrumpsChinaTrip"></span> days till D.J. Rumpus's first state visit to China! Let's teach him a few Mandarin phrases to help him score yuge points with President Xi Jinping!</p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class = "buttonWrapper">
+	  <img class = "clickMeButtonUp" src = "../images/click_me_up.png" alt = "click me button">
+	 </div>
+	 
+	<div class = "beginButtonLessonWrapper  beginningText">
+	  <img class = "beginLesson beginLessonHidden" src = "../images/begin_lesson_up_button.png" alt = "begin lesson">
+	</div>
+
+	<div id = "trumpWrapper">
+	  <img id = "trump" src = "../images/trump_walking_1.png" align = "center" alt = "trump spinning around">
+	</div> 
+</div>
+
+<!-- first Question  -->
+
+<div id = "poop">
+
+	<div id = "howYouSayChina">How do you say "China"?</div>
+
+	<div class = "squareWrapper">
+		<div class="square" id = "americaBox"> 
+			<div class = "textInSquare" > 美国 / Měiguó </div> 
+		</div>
+		<div class="square" id = "franceBox"> 
+			<div class = "textInSquare" > 法国(Fàguó)</div>
+		</div>
+		<div class="square" id = "japanBox">
+			<div class = "textInSquare" > 日本 (Rìběn)</div>
+		</div>
+		<div class="square" id = "chinaBox">
+			<div class = "textInSquare" > 中国 (Zhōngguó)</div> 
+		</div>
+	</div>
+
+
+	<div id = "checkAnswerWrapper"> 
+		<div id = "checkAnswerSecondWrapper">
+			<div id = "checkAnswer">Submit</div>
+		</div>
+	</div>
+
+	<div id = "reviewPlusNextLesson">
+		<div id = "reviewPlusNextLessonWrapper">
+			<p id= "reviewText"></p>
+			<div id = "placeHolder"></div>
+		</div>
+	</div> 
+
+</div>
+
+<!-- second Question  -->
+
+
+<div id = "secondQuestion">
+
+	<div id = "howYouSayLike">What is the proper pronunciation<br> of <span id = "xiHuan"> 喜欢</span> (which means 'to like')?</div>
+
+	<div class = "squareWrapper">
+		<div class = 'anotherWrapper'>
+			<div class="square" >Xǐhuàn
+			</div>
+			<div class="square">Xīhuán
+			</div>
+			<div class="square" id = "correctXihuan">Xǐhuān
+			</div>
+			<div class="square">Xīhuān
+			</div>
+		</div>
+	</div>
+
+
+	<div id = "checkAnswerWrapper"> 
+		<div id = "submitAndReplayButtonWrapper">
+			<div id = "checkAnswer">Submit</div>
+			<div id = "replayAudioButton">Play audio</div>
+		</div>
+	</div>
+
+
+	<div id = "reviewPlusNextLesson">
+		<div id = "reviewPlusNextLessonWrapper">
+			<p id= "reviewText"></p>
+			<div id = "placeHolder"></div>
+		</div>
+	</div> 
+
+</div>
+
+<!-- third Question  -->
+<!-- fourth Question  -->
+<!-- fifth Question  -->
+<!-- sixth Question  -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script id = 'openingSequenceJS' src = "../javascript/opening_sequence.js"> </script>
+<script id = "javaScript" src = "../javascript/mandarin_lesson_1.js"> </script>
+
+</body>
+</html>

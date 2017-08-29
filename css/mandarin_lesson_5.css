@@ -1,0 +1,152 @@
+body {
+	background-image: linear-gradient(-180deg, #0047E4 0%, #00A6FF 100%);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	margin: auto;
+}
+
+@font-face { font-family: Fipps; src: url('fipps-regular-copy.otf'); } 
+
+@font-face {font-family: HongKong; src: url('hongkong.ttf');}
+
+.poop {
+	position: relative;
+}
+
+h1 {
+	padding-top: 70px;
+	text-align: center;
+	color: black;
+	font-family: Fipps;
+	margin-bottom: 0;
+}
+
+
+#translateBoxWrapper {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+#translateBox {
+	width: 70%;
+	height: 175px;
+	border: 5px dashed white;
+	text-align: center;
+	margin: auto;
+	vertical-align: middle;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.translateBoxCover {
+	position: relative;
+	width: 99%;
+	height: 99%;
+	margin: 1% auto;
+}
+
+#choices {
+	position: relative;
+	float: left;
+	width: 100%;
+	margin: 50px auto 0 auto;
+}
+
+#choicesWrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.choices {
+	position: relative;
+	float: left;
+	background: #FFFFFF;
+	width: 100px;
+	height: 50px;
+	margin-left: 7px;
+	margin-top: 5px;
+	text-align: center;
+	padding-top: 25px;
+	box-shadow: 0 4px 8px 0 rgba(88,88,88,0.50);
+	border-radius: 2%;
+	font-size: 22px;
+}
+
+.choices:hover {
+	transform: scale(1.1, 1.1);
+}
+
+
+
+#checkAnswerWrapper {
+	width: 100%;
+	float: left;
+	margin-top: 0px;
+	margin-bottom: 50px;	
+}
+
+#checkAnswer {
+	padding-top: 5px;
+	width: 300px;
+	height: 50px;
+	background: #FFFFFF;
+	margin: 30px auto;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 3px;
+}
+
+
+.correctAnswer {
+	background: #00ff80 !important;
+}
+
+.incorrectAnswer {
+	background: #ff1a1a !important;
+}
+
+#reviewPlusNextLesson {
+	position: fixed;
+	float: left;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
+	margin: auto;
+	background: #E2E0E2;
+	z-index: inherit;
+	vertical-align: 20px;
+	box-shadow: 0 0 20px 0 rgba(1, 1, 1, 0.6);
+}
+
+#reviewPlusNextLessonWrapper {
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#reviewText {
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.buttonWrapper {
+	float: left;
+	width: 130px;
+	height:30px;
+	border: solid;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+#nextButton {
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 5px;
+	text-align: center;
+}

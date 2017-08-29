@@ -1,0 +1,107 @@
+@font-face { font-family: Fipps; src: url('fipps-regular-copy.otf'); } 
+
+body {
+	background-image: linear-gradient(-180deg, #0047E4 0%, #00A6FF 100%);
+	overflow: hidden;
+}
+
+h1 {
+	font-family: Fipps;
+	color: black;
+	font-size: 100px;
+}
+
+h3 {
+	font-size: 50px;
+}
+
+#explainerBoxWrapper {
+	position: absolute;
+	width: 100%;
+	top: 20%;
+	left: 0%;
+	opacity: 0;
+	transition: opacity 2s linear;
+
+	/*display: none;*/
+
+}
+
+#explainerBox {
+	width: 450px;
+	background-color: white;
+	border: 2px solid black;
+    border-radius: 20px;
+    margin: auto;
+    line-height: 25px;
+    padding-top: 5px;
+}
+
+p {
+	color: black;
+	font-size: 20px;
+
+}
+
+.testing {
+	height: 700px;
+	text-align: center;
+
+
+}
+
+.beginningText {
+	color: white;
+	padding-top: 30px;
+	line-height: 500%;
+}
+
+.buttonWrapper {
+	width: 100%;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+
+}
+
+.clickMeButtonUp {
+	height: 50px;
+	transform: translate(-50%, -50%);
+
+}
+
+.beginLessonHidden {
+	display: none;
+}
+
+.beginLesson {
+	height: 70px;
+	position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -50%;
+    margin-left: -50%;
+}
+
+.beginButtonLessonWrapper {
+	position: absolute;
+    max-width: 45%;
+    max-height: 45%;
+    top: 60%;
+    left: 50%;
+}
+
+
+
+
+#trumpWrapper {
+	position: absolute;
+	top: 400px;
+	right: -200px;
+}
+
+#trump {
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
