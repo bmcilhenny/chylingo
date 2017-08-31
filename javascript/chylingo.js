@@ -1,4 +1,4 @@
-var trumpy = document.querySelector("#trump");
+var trumpGraphic = document.querySelector("#trump");
 var requestAnimationFrame = window.requestAnimationFrame;
 
 $(document).ready(function() {
@@ -47,7 +47,7 @@ var trumpLooksUpCounter = 0;
 var secondaryCounter = 0;
 
 function trumpLooksUp(trumpLooksUpArray) {
-	trumpy.src = trumpLooksUpArray[trumpLooksUpCounter];
+	trumpGraphic.src = trumpLooksUpArray[trumpLooksUpCounter];
 	//console.log(trumpy.height)
 	//console.log(trumpy.width)
 	//console.log(trumpLooksUpArray[trumpLooksUpCounter]);
@@ -74,7 +74,7 @@ var trumpGivesThumbsUpCounter = 0;
 var secondaryThumbsUpCounter = 0;
 
 function moveTrumpsThumbsUp(trumpGivesThumbsUpArray) {
-	trumpy.src = trumpGivesThumbsUpArray[trumpGivesThumbsUpCounter];
+	trumpGraphic.src = trumpGivesThumbsUpArray[trumpGivesThumbsUpCounter];
 	setTimeout(function () {             
                         
       if (trumpGivesThumbsUpCounter + 1 == trumpGivesThumbsUpArray.length) {
@@ -96,8 +96,6 @@ function moveTrumpsThumbsUp(trumpGivesThumbsUpArray) {
       		
       	} else {
       		moveTrumpsThumbsUp(trumpGivesThumbsUpArray);
-      		console.log(trumpy.height)
-      		console.log(trumpy.width)
       	}
       } else {
       	trumpGivesThumbsUpCounter++;   
@@ -117,11 +115,11 @@ function moveTrumpIn() {
 	currentPosition += 2;
 	trumpyWrapper.style.right = currentPosition + 'px';
 	if (animationCounter < 6) {
-		trumpy.src = '../images/trump_walking_' + animationCounter + '.png';
+		trumpGraphic.src = '../images/trump_walking_' + animationCounter + '.png';
 		animationCounter +=1;
 	} else {
 		animationCounter = 1;
-		trumpy.src = '../images/trump_walking_' + animationCounter + '.png';
+		trumpGraphic.src = '../images/trump_walking_' + animationCounter + '.png';
 	}
 
 	if (currentPosition < (window.innerWidth / 2) - 200) {
@@ -139,10 +137,10 @@ var movingOutCurrentPosition = window.innerWidth / 2 - 200
 
 function turnTrumpAround() {
 	setTimeout(function() {
-		trumpy.src = '../images/trump_walking_1.png';
+		trumpGraphic.src = '../images/trump_walking_1.png';
 	}, 1000);
 	setTimeout(function() {
-		trumpy.src = '../images/trump_walking_out_1.png'
+		trumpGraphic.src = '../images/trump_walking_out_1.png'
 	}, 1000);
 }
 
@@ -153,11 +151,11 @@ function moveTrumpOut() {
 	movingOutCurrentPosition -= 2;
 	trumpyWrapper.style.right = movingOutCurrentPosition + 'px';
 	if (movingOutAnimationCounter < 9 ) {
-		trumpy.src = '../images/trump_walking_out_' + movingOutAnimationCounter + '.png';
+		trumpGraphic.src = '../images/trump_walking_out_' + movingOutAnimationCounter + '.png';
 		movingOutAnimationCounter += 1;
 	} else {
 		movingOutAnimationCounter = 1;
-		trumpy.src = '../images/trump_walking_out_' + movingOutAnimationCounter + '.png';
+		trumpGraphic.src = '../images/trump_walking_out_' + movingOutAnimationCounter + '.png';
 	}
 
 	if (movingOutCurrentPosition > -200 ) {
@@ -265,14 +263,13 @@ $('#placeHolder').mouseup(function() {
 
 var $correctXihuan = $('#correctXihuan');
 var answeredCorrectly = false;
-var xiHuan = document.createElement('audio');
-	xiHuan.setAttribute('src', '../audio/xihuan.mp3');
+var xiHuanAudio = document.createElement('audio');
+	xiHuanAudio.setAttribute('src', '../audio/xihuan.mp3');
 var chinaChinaChina = document.createElement('audio');
 	chinaChinaChina.setAttribute('src', '../audio/fantastic.mp3');
 
 $('#replayAudioButtonSecondQ').on('click', function() {
-	xiHuan.play();
-	console.log('clicked')
+	xiHuanAudio.play();
 });
 
 $('.squareSecondQ').on('click',function(){
@@ -308,7 +305,7 @@ $('#checkAnswerSecondQ').on('click', function() {
 			$('#placeHolderSecondQ').addClass('buttonWrapperSecondQ');
 			$('#placeHolderSecondQ').addClass('animated slideInUp');
 			$('#reviewTextSecondQ').addClass('animated slideInUp');
-			xiHuan.play();
+			xiHuanAudio.play();
 
 
 		} else {
@@ -399,11 +396,11 @@ $('#placeHolderThirdQ').mouseup(function() {
 
 var $correctHen = $('#correctHen');
 var answeredCorrectly = false;
-var hen = document.createElement("audio");
-        hen.src="../audio/hen.mp3";
-        hen.volume=0.70;
-        hen.autoPlay=false;
-        hen.preLoad=true;
+var henAudio = document.createElement("audio");
+        henAudio.src="../audio/hen.mp3";
+        henAudio.volume=0.70;
+        henAudio.autoPlay=false;
+        henAudio.preLoad=true;
 var tremendousPotential = document.createElement("audio");
 	tremendousPotential.src = "../audio/tremendousPotential.mp3";
 
@@ -416,7 +413,7 @@ $('.squareFourthQ').on('click',function(){
 
 
 $('#replayAudioButtonFourthQ').on('click', function() {
-	hen.play()
+	henAudio.play()
 })
 
 function resetButtonIfIncorrect() {
@@ -439,7 +436,7 @@ $('#checkAnswerFourthQ').on('click', function() {
 	//if nothing has the class selectedSquare { } else 
 		if ($correctHen.hasClass('selectedSquare') === true) {
 			answeredCorrectly = true;
-			hen.play();
+			henAudio.play();
 			$(this).removeClass('incorrectAnswer');
 			$(this).addClass('correctAnswer');
 			$(this).html('Correct!');
@@ -469,11 +466,11 @@ $('#placeHolderFourthQ').mouseup(function() {
 //fifth Question javascript
 
 var answeredCorrectly = false;
-var iVeryVeryVeryMuchLikeChina = document.createElement("audio");
-        iVeryVeryVeryMuchLikeChina.src = "../audio/iVeryVeryVeryMuchLikeChina.mp3";
-        iVeryVeryVeryMuchLikeChina.volume=0.30;
-        iVeryVeryVeryMuchLikeChina.autoPlay=false;
-        iVeryVeryVeryMuchLikeChina.preLoad=true;
+var iVeryVeryVeryMuchLikeChinaAudio = document.createElement("audio");
+        iVeryVeryVeryMuchLikeChinaAudio.src = "../audio/iVeryVeryVeryMuchLikeChina.mp3";
+        iVeryVeryVeryMuchLikeChinaAudio.volume=0.30;
+        iVeryVeryVeryMuchLikeChinaAudio.autoPlay=false;
+        iVeryVeryVeryMuchLikeChinaAudio.preLoad=true;
 var congratulations = document.createElement("audio");
 	congratulations.src = "../audio/congratulations.mp3";56
 
@@ -521,6 +518,7 @@ function checkAnswer() {
 		}
 	}
 
+//if choice clicked move it to the translateBoxCover, return choice to its original index if it is clicked again
 $('.choices').on('click', function() {
   var $this = $(this);
   if ($this.parent().attr('id') == 'translateBoxCover') {
