@@ -1,4 +1,4 @@
-Web app Chylingo
+Chylingo
 
 After getting rejected from Flatiron's in-person bootcamp, I knew I had to create something. 
 
