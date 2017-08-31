@@ -251,7 +251,7 @@ $('#checkAnswer').on('click', function() {
 $('#placeHolder').mouseup(function() {
 	console.log(answeredCorrectly);
 	if (answeredCorrectly === true) {
-		 fantastic.play();
+		 fantasticAudio.play();
 		 setTimeout(function() {
 			$('#firstQuestion').hide( "slow" );
 			$('#reviewPlusNextLessonSecondQ').show("slow");
