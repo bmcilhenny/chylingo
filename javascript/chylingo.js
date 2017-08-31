@@ -7,7 +7,6 @@ $(document).ready(function() {
 });
 
 var $startLessonButton = $('.startLessonButtonUp');
-
 $startLessonButton.mousedown(function() {
 	$(this).attr('src', '../images/start_lesson_button_down.png');
 });
@@ -74,7 +73,6 @@ var trumpGivesThumbsUpArray = ['../images/trump_thumbsup_1.png', '../images/trum
 var trumpGivesThumbsUpCounter = 0;
 var secondaryThumbsUpCounter = 0;
 
-//for some reason calling this animation causes the trump img to change height, cause the images are different dimenssions;
 function moveTrumpsThumbsUp(trumpGivesThumbsUpArray) {
 	trumpy.src = trumpGivesThumbsUpArray[trumpGivesThumbsUpCounter];
 	setTimeout(function () {             
@@ -205,8 +203,8 @@ var zhongGuoAudio = document.createElement("audio");
         zhongGuoAudio.volume=0.70;
         zhongGuoAudio.autoPlay=false;
         zhongGuoAudio.preLoad=true;
-var fantastic = document.createElement("audio");
-	fantastic.src = "../audio/chinaChinaChina.mp3";
+var fantasticAudio = document.createElement("audio");
+	fantasticAudio.src = "../audio/chinaChinaChina.mp3";
 
 
 
@@ -332,11 +330,11 @@ $('#placeHolderSecondQ').mouseup(function() {
 
 var $iBox = $('#iBox');
 var answeredCorrectly = false;
-var wo = document.createElement("audio");
-        wo.src="../audio/wo.mp3";
-        wo.volume=0.80;
-        wo.autoPlay=false;
-        wo.preLoad=true;
+var woAudio = document.createElement("audio");
+        woAudio.src="../audio/wo.mp3";
+        woAudio.volume=0.80;
+        woAudio.autoPlay=false;
+        woAudio.preLoad=true;
 var youreReallyBeautiful = document.createElement("audio");
 	youreReallyBeautiful.src = "../audio/you_know_you're_really_beautiful.mp3";
 
@@ -367,7 +365,7 @@ $('#checkAnswerThirdQ').on('click', function() {
 	//if nothing has the class selectedSquare { } else 
 		if ($iBox.hasClass('selectedSquare') === true) {
 			answeredCorrectly = true;
-			wo.play();
+			woAudio.play();
 			$(this).removeClass('incorrectAnswer');
 			$(this).addClass('correctAnswer');
 			$(this).html('Correct!');
