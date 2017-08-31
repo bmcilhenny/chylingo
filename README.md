@@ -1,6 +1,6 @@
-Chylingo
+#Chylingo
 
-After getting rejected from Flatiron's in-person bootcamp, I knew I had to create something. 
+After getting rejected from Flatiron's in-person bootcamp in July, I knew I had to create something. 
 
 Something that a) worked but more importantly b) was fun to build.
 
