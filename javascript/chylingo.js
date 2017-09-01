@@ -7,6 +7,7 @@ $(document).ready(function() {
 });
 
 var $startLessonButton = $('.startLessonButtonUp');
+
 $startLessonButton.mousedown(function() {
 	$(this).attr('src', '../images/start_lesson_button_down.png');
 });
@@ -15,7 +16,6 @@ $startLessonButton.mouseup(function() {
 	$(this).attr('src', '../images/start_lesson_button_up.png');
 	$(this).addClass('animated slideInLeft');
 });
-
 
 var today = new Date();
 var TrumpsStateVisit = new Date('March 12, 2018 12:00:00');
@@ -48,11 +48,8 @@ var secondaryCounter = 0;
 
 function trumpLooksUp(trumpLooksUpArray) {
 	trumpGraphic.src = trumpLooksUpArray[trumpLooksUpCounter];
-	//console.log(trumpy.height)
-	//console.log(trumpy.width)
-	//console.log(trumpLooksUpArray[trumpLooksUpCounter]);
-	setTimeout(function () {             
-                        
+	
+	setTimeout(function () {                                 
       if (trumpLooksUpCounter + 1 == trumpLooksUpArray.length) {
       	secondaryCounter ++;
       	trumpLooksUpCounter = 0;
@@ -73,6 +70,7 @@ var trumpGivesThumbsUpArray = ['../images/trump_thumbsup_1.png', '../images/trum
 var trumpGivesThumbsUpCounter = 0;
 var secondaryThumbsUpCounter = 0;
 
+//for some reason calling this animation causes the trump img to change height, cause the images are different dimenssions;
 function moveTrumpsThumbsUp(trumpGivesThumbsUpArray) {
 	trumpGraphic.src = trumpGivesThumbsUpArray[trumpGivesThumbsUpCounter];
 	setTimeout(function () {             
@@ -201,57 +199,48 @@ var zhongGuoAudio = document.createElement("audio");
         zhongGuoAudio.volume=0.70;
         zhongGuoAudio.autoPlay=false;
         zhongGuoAudio.preLoad=true;
-var fantasticAudio = document.createElement("audio");
-	fantasticAudio.src = "../audio/chinaChinaChina.mp3";
+var fantastic = document.createElement("audio");
+	fantastic.src = "../audio/chinaChinaChina.mp3";
 
 
 
 $('.square').on('click',function(){
    $('.square').removeClass('selectedSquare');
     $(this).addClass('selectedSquare');
-    console.log('clicked')
 });
 
 function resetButtonIfIncorrect() {
-	answeredCorrectly = false;
-	$('#checkAnswer').toggleClass('incorrectAnswer');
-	$('#checkAnswer').removeClass('correctAnswer');
-	$('#placeHolder').removeClass('animated slideInUp').addClass('animated fadeOutDown');
+	$('#checkTheAnswer').toggleClass('incorrectAnswer');
+	$('#checkTheAnswer').removeClass('correctAnswer');
+	$('#checkTheAnswer').html('Incorrect');
 	$('#reviewText').removeClass('animated slideInUp').addClass('animated fadeOutDown');
-	$('#checkAnswer').html('Incorrect')
 	
 	setTimeout(function() {
-		$('#checkAnswer').toggleClass('incorrectAnswer');
-		$('#checkAnswer').css('background', '#FFFFFF !important');
-		$('#checkAnswer').html('Submit');
+		$('#checkTheAnswer').toggleClass('incorrectAnswer');
+		$('#checkTheAnswer').css('background', '#FFFFFF !important');
+		$('#checkTheAnswer').html('Submit');
 	}, 2000);
-
 }
 
-$('#checkAnswer').on('click', function() {
+$('#checkTheAnswer').on('click', function() {
+	var reviewTextFirstQContent = '<p>中(zhōng) 国(guó), which literally means "middle kingdom",  is how you say China in Mandarin. <span class="nextButton">Next</span></p>';
 	//if nothing has the class selectedSquare { } else 
-		if ($china.hasClass('selectedSquare') === true) {
+		if ($china.hasClass('selectedSquare')) {
 			answeredCorrectly = true;
 			zhongGuoAudio.play();
 			$(this).removeClass('incorrectAnswer');
 			$(this).addClass('correctAnswer');
 			$(this).html('Correct!');
-			$('#reviewText').html('中(zhōng) 国(guó), which literally means "middle kingdom", is how you say China in Mandarin.')
-			$('#placeHolder').html('<div id = "nextButton">Next</div>');
-			$('#placeHolder').addClass('buttonWrapperHello');
-			$('#placeHolder').addClass('animated slideInUp');
+			$('#reviewText').html(reviewTextFirstQContent);
 			$('#reviewText').addClass('animated slideInUp');
-
-
-		} else {
+		} else { 
 			resetButtonIfIncorrect();
 		}
 });
 
-$('#placeHolder').mouseup(function() {
-	console.log(answeredCorrectly);
+$('#reviewText').mouseup(function() {
 	if (answeredCorrectly === true) {
-		 fantasticAudio.play();
+		 fantastic.play();
 		 setTimeout(function() {
 			$('#firstQuestion').hide( "slow" );
 			$('#reviewPlusNextLessonSecondQ').show("slow");
@@ -263,13 +252,14 @@ $('#placeHolder').mouseup(function() {
 
 var $correctXihuan = $('#correctXihuan');
 var answeredCorrectly = false;
-var xiHuanAudio = document.createElement('audio');
-	xiHuanAudio.setAttribute('src', '../audio/xihuan.mp3');
+var xiHuan = document.createElement('audio');
+	xiHuan.setAttribute('src', '../audio/xihuan.mp3');
 var chinaChinaChina = document.createElement('audio');
 	chinaChinaChina.setAttribute('src', '../audio/fantastic.mp3');
 
 $('#replayAudioButtonSecondQ').on('click', function() {
-	xiHuanAudio.play();
+	xiHuan.play();
+	console.log('clicked')
 });
 
 $('.squareSecondQ').on('click',function(){
@@ -294,27 +284,24 @@ function resetButtonIfIncorrectSecondQ() {
 }
 
 $('#checkAnswerSecondQ').on('click', function() {
+	var reviewTextSecondQContent = '<p>Combine 喜(happy) and 欢 (delighted) to say "like". "喜欢中国"" means "to like China." <span id="nextButtonSecondQ" class="nextButton">Next</span><p>';
 	//if nothing has the class selectedSquare { } else 
-		if ($correctXihuan.hasClass('selectedSquare') === true) {
+		if ($correctXihuan.hasClass('selectedSquare')) {
 			answeredCorrectly = true;
 			$(this).removeClass('incorrectAnswer');
 			$(this).addClass('correctAnswer');
 			$(this).html('Correct!');
-			$('#reviewTextSecondQ').html("Combine 喜(happy) and 欢 (delighted) to say 'like'. '喜欢中国'' means 'to like China.'")
-			$('#placeHolderSecondQ').html('<div id = "nextButtonSecondQ">Next</div>');
-			$('#placeHolderSecondQ').addClass('buttonWrapperSecondQ');
-			$('#placeHolderSecondQ').addClass('animated slideInUp');
+			$('#reviewTextSecondQ').html(reviewTextSecondQContent);
 			$('#reviewTextSecondQ').addClass('animated slideInUp');
-			xiHuanAudio.play();
-
-
+			xiHuan.play();
 		} else {
 			resetButtonIfIncorrectSecondQ();
 		}
 });
 
-$('#placeHolderSecondQ').mouseup(function() {
-	if (answeredCorrectly === true) {
+$('#reviewTextSecondQ').mouseup(function() {
+	console.log('clicked');
+	if (answeredCorrectly ===true) {
 		setTimeout(function() {
 			$('#secondQuestion').hide( "slow" );
 			$('#reviewPlusNextLessonThirdQ').show("slow");
@@ -359,6 +346,7 @@ function resetButtonIfIncorrectThirdQ() {
 }
 
 $('#checkAnswerThirdQ').on('click', function() {
+	var reviewTextThirdQContent = '<p>我 (Wǒ) means "I". 我喜欢你 (Wǒ xǐhuān nǐ) means "I like you."<span class ="nextButton">Next</span></p>';
 	//if nothing has the class selectedSquare { } else 
 		if ($iBox.hasClass('selectedSquare') === true) {
 			answeredCorrectly = true;
@@ -366,10 +354,7 @@ $('#checkAnswerThirdQ').on('click', function() {
 			$(this).removeClass('incorrectAnswer');
 			$(this).addClass('correctAnswer');
 			$(this).html('Correct!');
-			$('#reviewTextThirdQ').html('我 (Wǒ) means "I". 我喜欢你 (Wǒ xǐhuān nǐ) means "I like you."')
-			$('#placeHolderThirdQ').html('<div id = "nextButtonThirdQ">Next</div>');
-			$('#placeHolderThirdQ').addClass('buttonWrapperThirdQ');
-			$('#placeHolderThirdQ').addClass('animated slideInUp');
+			$('#reviewTextThirdQ').html(reviewTextThirdQContent);
 			$('#reviewTextThirdQ').addClass('animated slideInUp');
 
 
@@ -378,33 +363,28 @@ $('#checkAnswerThirdQ').on('click', function() {
 		}
 });
 
-$('#placeHolderThirdQ').mouseup(function() {
-	if (answeredCorrectly === true) {
+$('#reviewTextThirdQ').mouseup(function() {
+	if (answeredCorrectly) {
 		 youreReallyBeautiful.play();
 		 setTimeout(function() {
 			$('#thirdQuestion').hide( "slow" );
 			$('#reviewPlusNextLessonFourthQ').show("slow");
 		}, 1000);
-		 //append poop to another div then delete div?
-		 //slide in next lesson
 	}
 });
 
 
 //fourth Question javsscript
 
-
 var $correctHen = $('#correctHen');
 var answeredCorrectly = false;
-var henAudio = document.createElement("audio");
-        henAudio.src="../audio/hen.mp3";
-        henAudio.volume=0.70;
-        henAudio.autoPlay=false;
-        henAudio.preLoad=true;
+var hen = document.createElement("audio");
+        hen.src="../audio/hen.mp3";
+        hen.volume=0.70;
+        hen.autoPlay=false;
+        hen.preLoad=true;
 var tremendousPotential = document.createElement("audio");
 	tremendousPotential.src = "../audio/tremendousPotential.mp3";
-
-
 
 $('.squareFourthQ').on('click',function(){
    $('.squareFourthQ').removeClass('selectedSquare');
@@ -413,14 +393,13 @@ $('.squareFourthQ').on('click',function(){
 
 
 $('#replayAudioButtonFourthQ').on('click', function() {
-	henAudio.play()
+	hen.play()
 })
 
-function resetButtonIfIncorrect() {
+function resetButtonIfIncorrectFourthQ() {
 	answeredCorrectly = false;
 	$('#checkAnswerFourthQ').toggleClass('incorrectAnswer');
 	$('#checkAnswerFourthQ').removeClass('correctAnswer');
-	$('#placeHolderFourthQ').removeClass('animated slideInUp').addClass('animated fadeOutDown');
 	$('#checkAnswerFourthQ').html('Incorrect');
 	$('#reviewTextFourthQ').removeClass('animated slideInUp').addClass('animated fadeOutDown');
 	
@@ -433,26 +412,24 @@ function resetButtonIfIncorrect() {
 }
 
 $('#checkAnswerFourthQ').on('click', function() {
+	var reviewTextFourthQContent = '<p>很(Hěn) can be used like this: 她很喜欢我 (She really/very much likes me). <span class="nextButton">Next</span></p>';
 	//if nothing has the class selectedSquare { } else 
 		if ($correctHen.hasClass('selectedSquare') === true) {
 			answeredCorrectly = true;
-			henAudio.play();
+			hen.play();
 			$(this).removeClass('incorrectAnswer');
 			$(this).addClass('correctAnswer');
 			$(this).html('Correct!');
-			$('#reviewTextFourthQ').html('很(Hěn) can be used like this: 她很喜欢我 (She really/very much likes me).')
-			$('#placeHolderFourthQ').html('<div id = "nextButtonFourthQ">Next</div>');
-			$('#placeHolderFourthQ').addClass('buttonWrapperFourthQ');
-			$('#placeHolderFourthQ').addClass('animated slideInUp');
+			$('#reviewTextFourthQ').html(reviewTextFourthQContent);
 			$('#reviewTextFourthQ').addClass('animated slideInUp');
 
 
 		} else {
-			resetButtonIfIncorrect();
+			resetButtonIfIncorrectFourthQ();
 		}
 });
 
-$('#placeHolderFourthQ').mouseup(function() {
+$('#reviewTextFourthQ').mouseup(function() {
 	if (answeredCorrectly === true) {
 		setTimeout(function() {
 			 $('#fourthQuestion').hide('slow');
@@ -466,11 +443,11 @@ $('#placeHolderFourthQ').mouseup(function() {
 //fifth Question javascript
 
 var answeredCorrectly = false;
-var iVeryVeryVeryMuchLikeChinaAudio = document.createElement("audio");
-        iVeryVeryVeryMuchLikeChinaAudio.src = "../audio/iVeryVeryVeryMuchLikeChina.mp3";
-        iVeryVeryVeryMuchLikeChinaAudio.volume=0.30;
-        iVeryVeryVeryMuchLikeChinaAudio.autoPlay=false;
-        iVeryVeryVeryMuchLikeChinaAudio.preLoad=true;
+var iVeryVeryVeryMuchLikeChina = document.createElement("audio");
+        iVeryVeryVeryMuchLikeChina.src = "../audio/iVeryVeryVeryMuchLikeChina.mp3";
+        iVeryVeryVeryMuchLikeChina.volume=0.30;
+        iVeryVeryVeryMuchLikeChina.autoPlay=false;
+        iVeryVeryVeryMuchLikeChina.preLoad=true;
 var congratulations = document.createElement("audio");
 	congratulations.src = "../audio/congratulations.mp3";56
 
@@ -489,7 +466,6 @@ function resetButtonIfIncorrectFifthQ() {
 	answeredCorrectly = false;
 	$('#checkAnswerFifthQ').toggleClass('incorrectAnswer');
 	$('#checkAnswerFifthQ').removeClass('correctAnswer');
-	$('#placeHolderFifthQ').removeClass('animated slideInUp').addClass('animated fadeOutDown');
 	$('#reviewTextFifthQ').removeClass('animated slideInUp').addClass('animated fadeOutDown');
 	$('#checkAnswerFifthQ').html('Incorrect')
 	
@@ -502,23 +478,20 @@ function resetButtonIfIncorrectFifthQ() {
 }
 
 function checkAnswer() {
+	var reviewTextFifthQContent = '<p>我很喜欢你 (Wǒ hěn xǐhuān nǐ) means "I really/very much like you.<span class="nextButton">Finish</span></p>';
 	if ( correctChoices() === true) {
-			answeredCorrectly = true;
-			iVeryVeryVeryMuchLikeChina.play();
-			$('#checkAnswerFifthQ').removeClass('incorrectAnswer');
-			$('#checkAnswerFifthQ').addClass('correctAnswer');
-			$('#checkAnswerFifthQ').html('Correct!');
-			$('#reviewTextFifthQ').html('我很喜欢你 (Wǒ hěn xǐhuān nǐ) means "I really/very much like you."')
-			$('#placeHolderFifthQ').html('<div id = "finishButtonFifthQ">Finish</div>');
-			$('#placeHolderFifthQ').addClass('buttonWrapperFifthQ');
-			$('#placeHolderFifthQ').addClass('animated slideInUp');
-			$('#reviewTextFifthQ').addClass('animated slideInUp');
-		} else {
+		answeredCorrectly = true;
+		iVeryVeryVeryMuchLikeChina.play();
+		$('#checkAnswerFifthQ').removeClass('incorrectAnswer');
+		$('#checkAnswerFifthQ').addClass('correctAnswer');
+		$('#checkAnswerFifthQ').html('Correct!');
+		$('#reviewTextFifthQ').html(reviewTextFifthQContent);
+		$('#reviewTextFifthQ').addClass('animated slideInUp');
+	} else {
 			resetButtonIfIncorrectFifthQ();
 		}
 	}
 
-//if choice clicked move it to the translateBoxCover, return choice to its original index if it is clicked again
 $('.choices').on('click', function() {
   var $this = $(this);
   if ($this.parent().attr('id') == 'translateBoxCover') {
@@ -539,9 +512,10 @@ $('#checkAnswerFifthQ').on('click', function() {
 	checkAnswer(); 
 });
 
-$('#placeHolderFifthQ').mouseup(function() {
+$('#reviewTextFifthQ').mouseup(function() {
+	var credits = "Congratulations! You have finished your first lesson of Chylingo!\n \nThe idea for Chylingo came to creator Brendan after he spent an evening in front of the tube catching up on some news while simultaneously mulling over this deeply philosophical question:\n\nWhy in God's name does popular language-learning app Duolingo not offer lessons on the most spoken language in the world? Then all of the sudden. BOOM! Chylingo was born! All graphics you see in Chylingo (besides the customized text, thanks @dafonts.com) including the opening Trump animation are all designed by Brendan in Sketch. 'Take your work seriously, not yourself' is a motto Brendan lives by, hence Chylingo! He hopes the Mandarin lesson provided through Chylingo can serve as a gateway for avid language learners and total language noobs alike to pickup learning Mandarin. And hey, if you chuckled to yourself along the way, that's fine too. As an avid Mandarin-learner of almost 9 years, Brendan guarantees that the Mandarin lesson provided through Chylingo is gramatically accurate. Cheerios!";
 	if (answeredCorrectly === true) {
 		congratulations.play();
-		alert("Congratulations! You have finished your first lesson of Chylingo!\n \nThe idea for Chylingo came to creator Brendan after he spent an evening in front of the tube catching up on some news while simultaneously mulling over this deeply philosophical question:\n\nWhy in God's name does popular language-learning app Duolingo not offer lessons on the most spoken language in the world? Then all of the sudden. BOOM! Chylingo was born! All graphics you see in Chylingo (besides the customized text, thanks @dafonts.com) including the opening Trump animation are all designed by Brendan in Sketch. 'Take your work seriously, not yourself' is a motto Brendan lives by, hence Chylingo! He hopes the Mandarin lesson provided through Chylingo can serve as a gateway for avid language learners and total language noobs alike to pickup learning Mandarin. And hey, if you chuckled to yourself along the way, that's fine too. As an avid Mandarin-learner of almost 9 years, Brendan guarantees that the Mandarin lesson provided through Chylingo is gramatically accurate. Cheerios!");
+		alert(credits);
 	}
 });
