@@ -26,7 +26,7 @@ Duolingo (urghh!!! Duolingo doesn't even offer the most spoken language in the w
 
 Chylingo captures my ever-growing list of passions: learning, laughing and creating.
 
-I designed all of the graphics, dialogue and the overall lesson concept you see in Chylingo. I wanted to teach an authentic phrase in Chinese because at the end of the lesson I hope the user can realize that Chinese is very simple and straightforward. Much like coding, at first the weird characters seem daunting but a step at a time and things start to make more and more sense. I can assure you that after 8+ years of studying Chinese, the Chinese you learn om this lesson can be 
+I designed all of the graphics, dialogue and the overall lesson concept you see in Chylingo. I wanted to teach an authentic phrase in Chinese because at the end of the lesson I hope the user can realize that Chinese is very simple and straightforward. Much like coding, at first the weird characters seem daunting but a step at a time and things start to make more and more sense. I can assure you that after 8+ years of studying Chinese, the Chinese you learn in this lesson can be 
 directly utilized in the real world. In other words, Chinese people will actually understand what you are saying. 
 
 When creating anything, authenticity is key. That's why I tried to make the overall storyline behind Chylingo as authentic as possible: I actually think the sentence taught is something our current President would actually say to China's President/Premier
@@ -34,4 +34,4 @@ Xi Jinping.
 
 To conclude, I hope this app can bring you a chuckle. The world is a crazy place, the best medicine will forever be humor.
 
-###### I based Chylingo off Duolingo and have included a [gif](https://github.com/pigusan/chylingo/blob/master/chylingo.gif) because unfortunately the animations runs a bit more smootly here on my local machine. 
+###### I based Chylingo off Duolingo and have included a [gif](https://github.com/pigusan/chylingo/blob/master/chylingo.gif) because unfortunately the animations runs a bit more smoothly here on my local machine. 
