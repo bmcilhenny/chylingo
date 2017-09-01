@@ -1,8 +1,10 @@
-#Chylingo
+# Chylingo
+## Flatiron Project
+###### Chylingo! Teach D.J. Rumpus some Chinese words before his big state visit to People's Republic of Chyna.
 
-After getting rejected from Flatiron's in-person bootcamp in July, I knew I had to create something. 
+After getting rejected from Flatiron's in-person bootcamp in July, I knew I had to create something awesome. 
 
-Something that a) worked but more importantly b) was fun to build.
+Something that a) worked but more importantly b) summarized my personality and c) was fun to build.
 
 I knew when I had applied for Flatiron in July I was devoted to becoming a Software Engineer. 
 But with no projects under my belt and not even the slightest clue what Github or stackoverflow was 
@@ -43,4 +45,4 @@ Xi Jinping.
 
 To conclude, I hope this app can bring you a chuckle. The world is a crazy place, the best medicine will forever be humor.
 
-I based Chylingo off Duolingo and have included a gif because unfortunately the animations runs a bit more smootly here on my local machine. 
+###### I based Chylingo off Duolingo and have included a gif because unfortunately the animations runs a bit more smootly here on my local machine. 
