@@ -6,8 +6,7 @@ After getting rejected from Flatiron's in-person bootcamp in July, I knew I had 
 
 Something that a) worked but more importantly b) summarized my personality and c) was fun to build.
 
-I knew when I had applied for Flatiron in July I was devoted to becoming a Software Engineer. 
-But with no projects under my belt and not even the slightest clue what Github or stackoverflow was 
+I knew when I had applied for Flatiron in July I was devoted to becoming a Software Engineer but with no projects under my belt and not even the slightest clue what Github or stackoverflow was 
 I had nothing to show to my devotion.
 
 After graduating from college I move to Beijing where I worked for a small tech company focused on bringing 
