@@ -1,4 +1,4 @@
-# Chylingo
+# [Chylingo](https://pigusan.github.io/chylingo/html//)
 ## Flatiron Project
 ###### Chylingo! Teach D.J. Rumpus some Chinese words before his big state visit to People's Republic of Chyna.
 
@@ -44,4 +44,4 @@ Xi Jinping.
 
 To conclude, I hope this app can bring you a chuckle. The world is a crazy place, the best medicine will forever be humor.
 
-###### I based Chylingo off Duolingo and have included a gif because unfortunately the animations runs a bit more smootly here on my local machine. 
+###### I based Chylingo off Duolingo and have included a [gif](https://github.com/pigusan/chylingo/blob/master/chylingo.gif) because unfortunately the animations runs a bit more smootly here on my local machine. 
