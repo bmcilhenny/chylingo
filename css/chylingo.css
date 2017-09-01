@@ -8,6 +8,33 @@ body {
 	overflow: hidden;
 }
 
+/* Global */
+
+.nextButton {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px 20px;
+	border: solid;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+.nextButton:hover {
+	position: relative;
+	top:2px;
+}
+
+.correctAnswer {
+	background: #00ff80 !important;
+}
+
+.incorrectAnswer {
+	background: #ff1a1a !important;
+}
+
+/* Opening sequence */
+
 #openingSequence {
 	position: relative;
 	z-index: 8;
@@ -51,7 +78,6 @@ h3 {
 p {
 	color: black;
 	font-size: 20px;
-
 }
 
 .testing {
@@ -124,7 +150,6 @@ p {
 
 #firstQuestion {
 	position: relative;
-	z-index: 7;
 	width: 100%;
 }
 
@@ -138,20 +163,14 @@ p {
 }
 
 #squareWrapper {
-	width: 100%;
-	 margin: 50px auto;
-}
-
-#anotherWrapperFirstQ {
-	width: 80%;
-	text-align: center;
-	margin: auto;
+	margin-top: 20px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 	
 
 .square {
-	position: relative;
-	float: left;
 	width: 200px;
 	height: 200px;
 	margin-left: 10px;
@@ -211,24 +230,20 @@ p {
 
 #checkAnswerWrapper {
 	width: 100%;
-	float: left;
 	margin-top: 50px;
 	margin-bottom: 145px;
 }
 
 #checkAnswerSecondWrapper {
 	margin: 0 auto;
-	width: 30%;
+	text-align: center;
 }
 
-#checkAnswer {
-	float: left;
-	padding-top: 5px;
+#checkTheAnswer {
 	width: 300px;
 	height: 50px;
 	background: #FFFFFF;
-	margin: 0px auto;
-	text-align: center;
+	margin: auto;
 	font-size: 30px;
 	border-radius: 3px;
 }
@@ -239,7 +254,7 @@ p {
 }
 
 .incorrectAnswer {
-	background: #ff1a1a !important;
+	background-color: #ff1a1a !important;
 }
 
 #reviewPlusNextLesson {
@@ -250,51 +265,23 @@ p {
 	height: 10%;
 	margin: auto;
 	background: #E2E0E2;
-	z-index: inherit;
+	z-index: 100;
 	vertical-align: 20px;
 	box-shadow: 0 0 20px 0 rgba(1, 1, 1, 0.6);
 	display: none;
 }
 
 #reviewPlusNextLessonWrapper {
-	width: 95%;
+	width: 100%;
+	text-align: center;
 	margin: 0 auto;
 	position: relative;
+	z-index: 100;
 }
 
 #reviewText {
-	float: left;
-	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
-
-}
-
-.buttonWrapperHello {
-	float: left;
-	width: 130px;
-	height:30px;
-	border: solid;
-	border-radius: 5px;
-	margin-left: 10px;
-	margin-top: 15px;
-}
-
-.buttonWrapperHello:hover {
-	position: relative;
-	top: 2px;
-}
-
-#nextButton {
-	font-size: 20px;
-	font-weight: bold;
-	padding-top: 5px;
-	text-align: center;
-}
-
-#nextButton:hover {
-	position: relative;
-	top:2px;
 }
 
 #xiHuan {
@@ -317,7 +304,7 @@ p {
 }
 
 #secondQuestionTextWrapper {
-	float: left;
+	text-align: center;
 	width: 100%;
 	margin-bottom: 20px;
 }
@@ -337,15 +324,10 @@ p {
 }
 
 .squareWrapperSecondQ {
-	 width: 100%;
-	 margin: 50px auto;
-
-}
-
-.anotherWrapperSecondQ {
-	width: 80%;
-	text-align: center;
-	margin: auto;
+	margin-top: 20px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -354,7 +336,6 @@ p {
 	height: 100px;
 	margin-left: 10px;
 	margin-top: 10px;
-	float: left;
 	/* Rectangle 6: */
 	background: #FFFFFF;
 	box-shadow: 0 4px 8px 0 rgba(88,88,88,0.50);
@@ -381,56 +362,40 @@ p {
 	background: #e6ffff;
 	position: relative;
 	top: 85%;
-	text-align: center;
 	font-size: 22px;
 	
 }
 
 #checkAnswerWrapperSecondQ {
 	width: 100%;
-	float: left;
 	margin-top: 50px;
 	margin-bottom: 145px;
-
-	
 }
 
 #submitAndReplayButtonWrapperSecondQ {
-	width: 50%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #checkAnswerSecondQ {
-	float: left;
-	padding-top: 5px;
 	width: 300px;
 	height: 50px;
 	background: #FFFFFF;
-	margin: 0px auto;
-	text-align: center;
+	margin: auto;
+	margin-bottom: 20px !important;
 	font-size: 30px;
 	border-radius: 3px;
 }
 
 
 #replayAudioButtonSecondQ {
-	float: left;
+	display: inline;
 	padding-top: 5px;
-	margin-left: 30px;
-	width: 200px;
-	height: 50px;
+	padding: 5px 20px;
 	background: #FFFFFF;
 	text-align: center;
 	font-size: 30px;
 	border-radius: 3px;
-}
-
-.correctAnswer {
-	background: #00ff80 !important;
-}
-
-.incorrectAnswer {
-	background: #ff1a1a !important;
 }
 
 #reviewPlusNextLessonSecondQ {
@@ -448,41 +413,18 @@ p {
 }
 
 #reviewPlusNextLessonWrapperSecondQ {
-	width: 85%;
+	width: 100%;
+	text-align: center;
 	margin: 0 auto;
 	position: relative;
+	z-index: 100;
 }
 
 #reviewTextSecondQ {
-	float: left;
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
 
-}
-
-.buttonWrapperSecondQ {
-	float: left;
-	width: 130px;
-	height:30px;
-	border: solid;
-	border-radius: 5px;
-	margin-left: 10px;
-	margin-top: 15px;
-	
-}
-
-#nextButtonSecondQ {
-	font-size: 20px;
-	font-weight: bold;
-	padding-top: 5px;
-	text-align: center;
-
-}
-
-.buttonWrapperSecondQ:hover {
-	position: relative;
-	top: 2px;
 }
 
 #nextButtonSecondQ:hover {
@@ -506,13 +448,12 @@ p {
 }
 
 #thirdQuestionTextWrapper {
-	float: left;
+	text-align: center;
 	width: 100%;
 	margin-bottom: 20px;
 }
 
 #howDoYouSayI {
-	display: block;
 	font-size: 32px;
 	padding-top: 70px;
 	text-align: center;
@@ -522,15 +463,10 @@ p {
 }
 
 .squareWrapperThirdQ {
-	 width: 100%;
-}
-
-#anotherDamnWrapperThirdQ {
-	position: relative;
-	width: 60%;
-	text-align: center;
-	margin: auto;
-	margin-top: 50px;
+	margin-top: 20px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .squareThirdQ {
@@ -538,8 +474,6 @@ p {
 	height: 200px;
 	margin-left: 10px;
 	margin-top: 10px;
-	float: left;
-	/* Rectangle 6: */
 	background: #FFFFFF;
 	box-shadow: 0 4px 8px 0 rgba(88,88,88,0.50);
 	border-radius: 2%;
@@ -590,9 +524,9 @@ p {
 
 #checkAnswerWrapperThirdQ {
 	width: 100%;
-	float: left;
+	text-align: center;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 
 	
 }
@@ -611,7 +545,6 @@ p {
 
 #reviewPlusNextLessonThirdQ {
 	position: fixed;
-	float: left;
 	bottom: 0;
 	width: 100%;
 	height: 10%;
@@ -630,22 +563,10 @@ p {
 }
 
 #reviewTextThirdQ {
-	float: left;
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
 
-}
-
-.buttonWrapperThirdQ {
-	float: left;
-	width: 130px;
-	height:30px;
-	border: solid;
-	border-radius: 5px;
-	margin-left: 10px;
-	margin-top: 15px;
-	
 }
 
 #nextButtonThirdQ {
@@ -653,11 +574,6 @@ p {
 	font-weight: bold;
 	padding-top: 5px;
 	text-align: center;
-}
-
-.buttonWrapperThirdQ:hover {
-	position: relative;
-	top: 2px;
 }
 
 #nextButtonThirdQ:hover {
@@ -682,7 +598,6 @@ p {
 }
 
 #fourthQuestionTextWrapper {
-	float: left;
 	width: 100%;
 	margin-bottom: 20px;
 }
@@ -702,15 +617,10 @@ p {
 }
 
 .squareWrapperFourthQ {
-	 width: 100%;
-	 margin: 50px auto;
-
-}
-
-.anotherWrapperFourthQ {
-	width: 80%;
-	text-align: center;
-	margin: auto;
+	margin-top: 20px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -719,7 +629,6 @@ p {
 	height: 100px;
 	margin-left: 10px;
 	margin-top: 10px;
-	float: left;
 	/* Rectangle 6: */
 	background: #FFFFFF;
 	box-shadow: 0 4px 8px 0 rgba(88,88,88,0.50);
@@ -753,25 +662,21 @@ p {
 
 #checkAnswerWrapperFourthQ {
 	width: 100%;
-	float: left;
 	margin-top: 50px;
 	margin-bottom: 145px;
-
-	
 }
 
 #submitAndReplayButtonWrapperFourthQ {
-	width: 60%;
-	margin: 0 auto;
+	text-align: center;
+	margin: auto;
 }
 
 #checkAnswerFourthQ {
-	float: left;
 	padding-top: 5px;
 	width: 300px;
 	height: 50px;
 	background: #FFFFFF;
-	margin: 0px auto;
+	margin: 0px auto 20px auto;
 	text-align: center;
 	font-size: 30px;
 	border-radius: 3px;
@@ -779,9 +684,8 @@ p {
 
 
 #replayAudioButtonFourthQ {
-	float: left;
 	padding-top: 5px;
-	margin-left: 30px;
+	margin: auto;
 	width: 200px;
 	height: 50px;
 	background: #FFFFFF;
@@ -806,28 +710,14 @@ p {
 }
 
 #reviewPlusNextLessonWrapperFourthQ {
-	width: 75%;
 	margin: 0 auto;
 	position: relative;
+	text-align: center;
 }
 
 #reviewTextFourthQ {
-	float: left;
-	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
-
-}
-
-.buttonWrapperFourthQ {
-	float: left;
-	width: 130px;
-	height:30px;
-	border: solid;
-	border-radius: 5px;
-	margin-left: 10px;
-	margin-top: 15px;
-	
 }
 
 #nextButtonFourthQ {
@@ -836,11 +726,6 @@ p {
 	padding-top: 5px;
 	text-align: center;
 
-}
-
-.buttonWrapperFourthQ:hover {
-	position: relative;
-	top: 2px;
 }
 
 #nextButtonFourthQ:hover {
@@ -856,8 +741,6 @@ p {
 --------------------
 --------------------*/
 
-
-
 #fifthQuestion {
 	position: relative;
 	display: block;
@@ -866,7 +749,6 @@ p {
 }
 
 #fifthQuestionTextWrapper {
-	float: left;
 	width: 100%;
 	margin-bottom: 20px;
 }
@@ -882,7 +764,6 @@ p {
 
 #translateBoxWrapper {
 	position: relative;
-	float: left;
 	width: 100%;
 	margin: 20px auto 0 auto;
 	text-align: center;
@@ -892,34 +773,18 @@ p {
 	width: 70%;
 	height: 175px;
 	border: 5px dashed white;
-	text-align: center;
 	margin: auto;
-	vertical-align: middle;
 	z-index: 0;
 	overflow: hidden;
 }
 
-.translateBoxCover {
-	position: relative;
-	width: 99%;
-	height: 99%;
-	margin: 1% auto;
-}
-
-#choices {
-	position: relative;
-	float: left;
-	width: 100%;
-	margin: 20px auto 0 auto;
-}
-
 #choicesWrapper {
-	width: 90%;
-	margin: 0 auto;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .choices {
-	position: relative;
 	float: left;
 	background: #FFFFFF;
 	width: 75px;
@@ -937,13 +802,9 @@ p {
 	transform: scale(1.1, 1.1);
 }
 
-
-
 #checkAnswerWrapperFifthQ {
 	width: 100%;
-	float: left;
-	margin-top: 10px;
-	margin-bottom: 50px;	
+	margin: 10px auto 50px auto;	
 }
 
 #checkAnswerFifthQ {
@@ -951,7 +812,7 @@ p {
 	width: 300px;
 	height: 50px;
 	background: #FFFFFF;
-	margin: 10px auto;
+	margin: 10px auto 80px auto;
 	text-align: center;
 	font-size: 30px;
 	border-radius: 3px;
@@ -978,33 +839,9 @@ p {
 }
 
 #reviewTextFifthQ {
-	float: left;
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
-}
-
-.buttonWrapperFifthQ {
-	float: left;
-	width: 130px;
-	height:30px;
-	border: solid;
-	border-radius: 5px;
-	margin-left: 10px;
-	margin-top: 15px;
-	margin-bottom: 30px;
-}
-
-#finishButtonFifthQ {
-	font-size: 20px;
-	font-weight: bold;
-	padding-top: 5px;
-	text-align: center;
-}
-
-.buttonWrapperFifthQ:hover {
-	position: relative;
-	top: 2px;
 }
 
 #finishButtonFifthQ:hover {
