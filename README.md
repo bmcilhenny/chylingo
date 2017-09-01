@@ -18,7 +18,7 @@ the capital city and cultural hub of China but the city with the most authentic,
 
 - I love enterainment. Animation, comedy, drama, fiction. I love the power of emotion, the way people's moods can change in an instant because of the right combination of color, sound and words.
 
-- I also love politics.I studied economics at university as well as asian studies. I loved the intersection of politics and 
+- I also love politics. I studied economics at university as well as asian studies. I loved the intersection of politics and 
 economics because it is the closest thing one can get to predicting the future. Also, I enjoy being informed and learning from others so when it comes a time where politics is brought up in conversation I can hopefully supply some value to the discussion.
 
 Sitting in front of the tube one evening going through some Chinese lessons on an app similar to the language learning app
