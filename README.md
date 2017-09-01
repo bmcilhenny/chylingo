@@ -2,7 +2,7 @@
 ## Flatiron Project
 ###### Chylingo! Teach D.J. Rumpus some Chinese words before his big state visit to People's Republic of Chyna.
 
-After getting rejected from Flatiron's in-person bootcamp in July, I knew I had to create something awesome. 
+After getting rejected from Flatiron's in-person bootcamp in June, I knew I had to create something awesome. 
 
 Something that a) worked but more importantly b) summarized my personality and c) was fun to build.
 
